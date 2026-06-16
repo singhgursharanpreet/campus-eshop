@@ -2,11 +2,6 @@ const mongoose = require("mongoose");
 
 const orderSchema = new mongoose.Schema(
   {
-    userId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-    },
-
     buyerName: String,
     shippingAddress: String,
 
@@ -22,7 +17,6 @@ const orderSchema = new mongoose.Schema(
     ],
 
     total: Number,
-
     status: {
       type: String,
       default: "placed",
